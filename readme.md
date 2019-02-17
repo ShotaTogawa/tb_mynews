@@ -42,5 +42,34 @@ Routingは来たアクセスをControllerの中のActionに渡す。
 group化することによって可読性があることと、Contorollerが保持しているactionを呼び出すごとにprefixを設定する必要がなくなる。
 
 ## [メモ]
-・サーバー起動 `php artisan serve`
-・routingファイルの在りか `/routes/wep.php`
+・サーバー起動 `php artisan serve`  
+・routingファイルの在りか `/routes/wep.php`  
+
+# PHP/Laravel 11  
+## 1 Viewは何をするところでしょうか。簡潔に説明してみてください。  
+
+Controllerの指示によってアクセスしてきたユーザーのブラウザに表示するデータを生成する。  
+
+## 2 プログラマーがhtmlを書かずにPHPなどのプログラミング言語やフレームワークを使う必要があるのはどういった理由でしょうか。  
+
+動的なwebページを作成するため。  
+
+## 3 【応用】 前々章でAdmin/ProfileControllerのadd Action, edit Action に次のように記述しました。add Action と edit Action を描画するには、それぞれどこのディレクトリに何というbladeファイルを設置すれば良いでしょうか。  
+
+add Action  
+`resources/views/admin/profile/create/create.blade.php`  
+edit Action  
+`resources/views/admin/profile/edit/edit.blade.php`  
+
+## [メモ]
+・viewファイルの生成場所  
+`resources/views/`の配下  
+・下記はadmin/newsディレクトリ配下のcreate.blade.html というファイルを呼び出す という意味です。  
+```php
+public function add()
+  {
+      return view('admin.news.create');
+  }
+```  
+・Viewで出力するhmtlはbladeというテンプレートエンジンを使う。拡張子は`xxxx.blade.php`
+
