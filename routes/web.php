@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('news/create','Admin\NewsController@add');
+    Route::get('news/update', 'Admin\NewsController@edit');
+});
+
+/* 
+PHP/Laravel 10 – [Mac編]Routingについて理解するの課題3
+
+Route::get('XXX', 'Admin\AAAController@bbb');
+
+
+
+*/

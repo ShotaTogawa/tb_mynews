@@ -30,3 +30,17 @@ Routingを設定しないとActionが使われることはない。
 ### 3.ControllerとRoutingの役割について、説明してください。  
 Routingは来たアクセスをControllerの中のActionに渡す。  
 コンテンツを作りたい場合はControllerにActionを作り、RoutingでそのActionに割り当てれば良い。  
+
+# PHP/Laravel 10
+## [課題]
+### 1.URLとControllerやActionを紐付ける機能を何といいますか？
+
+アクセスに応じて対応するControllerのActionを呼び出す仕組み
+
+### 2.あなたが考える、group化をすることのメリットを考えてみてください。
+
+group化することによって可読性があることと、Contorollerが保持しているactionを呼び出すごとにprefixを設定する必要がなくなる。
+
+## [メモ]
+・サーバー起動 `php artisan serve`
+・routingファイルの在りか `/routes/wep.php`
