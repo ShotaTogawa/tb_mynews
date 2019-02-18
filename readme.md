@@ -118,6 +118,16 @@ $ php artisan migrate
 ・GET: リクエストは指定したURLの内容を取り出すための要求  
 ・POST: URLに対して情報を要求するだけでなく、クライアントからさまざまなデータを送信することができる。
 
+# PHP/Laravel 15   
+
+## [課題]  
+
+## [メモ]  
+・migrationファイルの作成: `php artisan make:migration create_news_table`  
+・カラムの追加: `$table->string('title');`  
+・nullの許容: `$table->string('image_path')->nullable();`  
+・カラムの追加をしたら`php artisan migrate`を実行する。(rollbackは`php artisan migrate:rollback`)  
+・modelの生成: `php artisan make:model News`
 
 
 
