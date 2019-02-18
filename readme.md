@@ -84,3 +84,30 @@ extendsで継承できる。　　
 ・asset(‘ファイルパス’)は、publicディレクトリのパスを返す関数。　　
 ・Webpackは複数に分割されているCSSやJavascriptを一つのファイルにまとめる仕組み。ソースコードを圧縮し、接続速度が早くなります。　　
 ・`webpack.mix.js`に設定を記載する。　　
+
+# PHP/Laravel 13  
+
+## [課題]  
+
+## [メモ]  
+・Authの実装  
+```
+$ php artisan make:auth
+$ php artisan migrate
+```  
+
+・middlewareの参考サイト: `https://readouble.com/laravel/5.3/ja/middleware.html`  
+・ヘルパ関数  
+  viewで使うための関数の一種  
+・route関数: URLを生成したりリダイレクトしたりするための関数。　　
+・＠csrf: 認証済みのユーザーがリクエストを送信しているのかを確認するために利用する。参考: `https://readouble.com/laravel/5.6/ja/csrf.html`  
+・三項演算子
+`<条件式> ? <真式> : <偽式> ex) a == 1 ? "a=1" : "a is not 1`  
+・oldヘルパ関数: セッションにフラッシュデータ（一時的にしか保存されないデータ）として入力されているデータを取得することができる。  
+・バリデーション参考: `https://readouble.com/laravel/5.5/ja/validation.html`
+
+
+
+
+
+
