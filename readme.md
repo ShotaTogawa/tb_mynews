@@ -127,7 +127,16 @@ $ php artisan migrate
 ・カラムの追加: `$table->string('title');`  
 ・nullの許容: `$table->string('image_path')->nullable();`  
 ・カラムの追加をしたら`php artisan migrate`を実行する。(rollbackは`php artisan migrate:rollback`)  
-・modelの生成: `php artisan make:model News`
+・modelの生成: `php artisan make:model News`  
+・Debugの方法: `\Debugbar::info(確認したい変数など);`  
+・`$request->all();`はformで入力された値を取得することができます  
+・basename(): パスではなくファイル名だけ取得するメソッド  
+・fill(arr): 配列をカラムに代入するメソッド  
+・save(): データベースに保存する　　
+
+
+
+
 
 
 

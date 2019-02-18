@@ -22,6 +22,7 @@ class NewsController extends Controller
         //Newsのインスタンス作成
         $news = new News;
         //requestで受け取った内容を$formに格納
+        
         $form = $request->all();
 
         // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
