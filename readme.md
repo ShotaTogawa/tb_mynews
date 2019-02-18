@@ -97,9 +97,8 @@ $ php artisan migrate
 ```  
 
 ・middlewareの参考サイト: `https://readouble.com/laravel/5.3/ja/middleware.html`  
-・ヘルパ関数  
-  viewで使うための関数の一種  
-・route関数: URLを生成したりリダイレクトしたりするための関数。　　
+・ヘルパ関数: viewで使うための関数の一種  
+・route関数: URLを生成したりリダイレクトしたりするための関数。  
 ・＠csrf: 認証済みのユーザーがリクエストを送信しているのかを確認するために利用する。  参考: `https://readouble.com/laravel/5.6/ja/csrf.html`  
 ・三項演算子  
 `<条件式> ? <真式> : <偽式> ex) a == 1 ? "a=1" : "a is not 1`  
