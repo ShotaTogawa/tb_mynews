@@ -15,12 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create','Admin\NewsController@add') -> middleware('auth');
     Route::get('profile/create', 'Admin\ProfileController@add') -> middleware('auth');
     Route::get('profile/edit', 'Admin\ProfileController@edit') -> middleware('auth');
 });
+*/
 
+//PHP/Laravel 14で下記に修正
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('news/create', 'Admin\NewsController@add');
+    Route::post('news/create', 'Admin\NewsController@create');
+    Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::post('profile/create', 'Admin\ProfileController@create');
+    Route::get('profile/edit', 'Admin\ProfileController@edit');
+    Route::post('profile/edit', 'Admin\ProfileController@update');
+});
 /* 
 PHP/Laravel 10 – [Mac編]Routingについて理解するの課題3
 

@@ -108,6 +108,16 @@ $ php artisan migrate
 ・ヘルパー参考: `https://readouble.com/laravel/5.5/ja/helpers.html`  
 ・認証参考: `https://readouble.com/laravel/5.6/ja/authentication.html`  
 
+# PHP/Laravel 14  
+
+## [課題]  
+
+## [メモ]  
+・`$errors` は `validate` で弾かれた内容を記憶する配列  
+・HTTP: ブラウザとwebアプリケーションが間の通信が発生した際、この通信を行う定められた手順のこと。  
+・GET: リクエストは指定したURLの内容を取り出すための要求  
+・POST: URLに対して情報を要求するだけでなく、クライアントからさまざまなデータを送信することができる。
+
 
 
 
