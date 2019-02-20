@@ -56,4 +56,44 @@ class NewsController extends Controller
         return view('admin.news.index',['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
+    public function edit(Request $request){
+        $news = News::find($request->id);
+        if(empty($news)) {
+            abort(404);
+        }
+        return view('admin.news.edit',['news_form' => $news]);
+    }
+
+    public function update(Request $request) {
+        // validationをかける
+        $this->validate($request, News::$rules);
+        // News modelからデータを取得する
+        $news = News::find($request->id);
+        // 送信されてきたフォームデータを格納する
+        $news_form = $request->all();
+
+        if(isset($news_form['image'])) {
+            $path = $request->file('image')->store('public/image');
+            $news->image_path = basename($path);
+        } else {
+            $news->image_path = null;
+        }
+
+        unset($news_form['_token']);
+        unset($news_form['image']);
+
+        // 該当するデータを上書きして保存する
+        $news->fill($news_form)->save();
+
+        return redirect('admin/news');
+    }
+
+    public function delete(Request $request) {
+        // 該当するNewsModelを取得
+        $news = News::find($request->id);
+        // 削除
+        $news->delete();
+        return redirect('admin/news');
+    }
+
 }
