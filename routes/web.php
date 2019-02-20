@@ -36,6 +36,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::post('profile/edit', 'Admin\ProfileController@update');
 });
+
+Route::get('/', 'NewsController@index');
+
 /* 
 PHP/Laravel 10 – [Mac編]Routingについて理解するの課題3
 
